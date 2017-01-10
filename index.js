@@ -1,11 +1,6 @@
 var child_process 			= require('child_process');
 var adapter 				= require('../../adapter-lib.js');
-var exec 					= new adapter({
-	"name": "Url",
-	"loglevel": 3,
-	"description": "Führt http-requests aus.",
-	"settingsFile": ""
-});
+var exec 					= new adapter("exec");
 
 process.on('message', function(data) {
 	var status = data.status;
