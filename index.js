@@ -2,9 +2,9 @@ var child_process 			= require('child_process');
 var adapter 				= require('../../adapter-lib.js');
 var exec 					= new adapter("exec");
 
-process.on('message', function(data) {
-	var status = data.status;
-	var data = data.data;
+process.on('message', function(request) {
+	var status = request.status;
+	var data = request.data;
 	sendEXEC(status, data);
 });
 
